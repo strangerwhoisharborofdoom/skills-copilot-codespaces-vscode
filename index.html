@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of Clans Clone - Admin Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚔️ Clash of Clans Clone</h1>
+            <div class="header-controls">
+                <button id="adminBtn" class="admin-toggle-btn">🔐 Admin Login</button>
+            </div>
+        </header>
+
+        <!-- Admin Login Modal -->
+        <div id="adminModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Administrator Access</h2>
+                <input type="password" id="adminPassword" placeholder="Enter admin password">
+                <button id="adminLoginBtn">Login</button>
+                <p class="hint">Hint: password is "admin123"</p>
+            </div>
+        </div>
+
+        <!-- Admin Panel -->
+        <div id="adminPanel" class="admin-panel hidden">
+            <h3>🛡️ Administrator Panel</h3>
+            <div class="admin-controls">
+                <button id="giveGold">+1000 Gold</button>
+                <button id="giveElixir">+1000 Elixir</button>
+                <button id="giveGems">+100 Gems</button>
+                <button id="instantBuild">Instant Build All</button>
+                <button id="unlockAll">Unlock All Buildings</button>
+                <button id="resetVillage">Reset Village</button>
+            </div>
+            <div class="admin-stats">
+                <p>Admin Mode: <span id="adminStatus">Active</span></p>
+                <p>Total Buildings: <span id="totalBuildings">0</span></p>
+            </div>
+        </div>
+
+        <!-- Resources Display -->
+        <div class="resources">
+            <div class="resource">
+                <span class="resource-icon">💰</span>
+                <span class="resource-name">Gold:</span>
+                <span id="goldAmount" class="resource-amount">1000</span>
+            </div>
+            <div class="resource">
+                <span class="resource-icon">⚗️</span>
+                <span class="resource-name">Elixir:</span>
+                <span id="elixirAmount" class="resource-amount">1000</span>
+            </div>
+            <div class="resource">
+                <span class="resource-icon">💎</span>
+                <span class="resource-name">Gems:</span>
+                <span id="gemsAmount" class="resource-amount">50</span>
+            </div>
+        </div>
+
+        <!-- Building Selection -->
+        <div class="building-shop">
+            <h3>Buildings</h3>
+            <div class="buildings-list">
+                <button class="building-btn" data-building="townhall" data-cost-gold="500" data-cost-elixir="500">
+                    🏰 Town Hall<br><small>500💰 500⚗️</small>
+                </button>
+                <button class="building-btn" data-building="goldmine" data-cost-gold="200" data-cost-elixir="100">
+                    ⛏️ Gold Mine<br><small>200💰 100⚗️</small>
+                </button>
+                <button class="building-btn" data-building="elixircollector" data-cost-gold="100" data-cost-elixir="200">
+                    🧪 Elixir Collector<br><small>100💰 200⚗️</small>
+                </button>
+                <button class="building-btn" data-building="barracks" data-cost-gold="300" data-cost-elixir="300">
+                    🏕️ Barracks<br><small>300💰 300⚗️</small>
+                </button>
+                <button class="building-btn" data-building="cannon" data-cost-gold="400" data-cost-elixir="0">
+                    🔫 Cannon<br><small>400💰</small>
+                </button>
+                <button class="building-btn" data-building="wall" data-cost-gold="50" data-cost-elixir="0">
+                    🧱 Wall<br><small>50💰</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- Village Grid -->
+        <div class="village">
+            <h3>Your Village</h3>
+            <div id="villageGrid" class="village-grid"></div>
+        </div>
+
+        <!-- Game Log -->
+        <div class="game-log">
+            <h4>Game Log</h4>
+            <div id="logMessages"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
