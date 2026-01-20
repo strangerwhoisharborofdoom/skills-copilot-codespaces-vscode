@@ -19,7 +19,7 @@ A browser-based clone of Clash of Clans featuring a complete administrator acces
 ### 🛡️ Administrator Access
 The game includes a powerful administrator panel with special privileges:
 
-**Admin Password**: `admin123`
+**Admin Password**: `admin123` *(Note: This is a demo/educational game - in production, use server-side authentication)*
 
 **Admin Features**:
 - **Unlimited Resources**: Instantly add resources (Gold, Elixir, Gems)

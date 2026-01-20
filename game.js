@@ -201,6 +201,8 @@ function setupEventListeners() {
 
     adminLoginBtn.addEventListener('click', () => {
         const password = document.getElementById('adminPassword').value;
+        // Note: This is a demo/educational game - password is intentionally simple and client-side
+        // In a production environment, authentication should be server-side
         if (password === 'admin123') {
             gameState.isAdmin = true;
             document.getElementById('adminPanel').classList.remove('hidden');
